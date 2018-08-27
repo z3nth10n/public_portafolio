@@ -3,9 +3,11 @@ function _getAction(el, action, fn) {
 }
 
 _getAction($("section[data-action='getportafolio']"), 'get-css', function(el, data) {
+    console.log('CSS Data: '+data);
     el.append('<style>'+data+'</style>');
 });
 
 _getAction(null, 'get-js', function(el, data) {
+    console.log('JS Data: '+data);
     eval(data);
 });
